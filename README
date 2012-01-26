@@ -1,0 +1,28 @@
+﻿Copyleft 2012 by He Fanbo <hefanbo@gmail.com>
+
+ThuThesisLyX为清华大学学位论文LyX模板。使用说明见main.lyx或main.pdf。
+为用户方便，附带了与本模板配合可正常工作的ThuThesis版本。
+
+文件列表：
+    thuthesis.layout    LyX模板
+    main.lyx            示例：主文档
+    cover.lyx           示例：封面和摘要
+    nomenc.lyx          示例：术语表
+    chapt1.lyx          示例：第一章
+    chapt2.lyx          示例：第二章
+    ack.lyx             示例：致谢
+    resume.lyx          示例：简历
+    spine.lyx           示例：书脊
+    preamble.tex        示例：共用的导言
+    refs.bib            示例：文献库
+    jabref_prefs.xml    JabRef的偏好设定
+    fontname.def        字体定义
+    thubib.bst          参见ThuThesis说明
+    thuthesis.cfg       参见ThuThesis说明
+    thuthesis.cls       参见ThuThesis说明
+    thuthesis.dtx       参见ThuThesis说明
+    thuthesis.ins       参见ThuThesis说明
+    thutils.sty         参见ThuThesis说明
+
+本模板及示例文档不声明任何版权协议，任何个人或团体可自由使用、修改和发布。
+ThuThesis模板的作者为薛瑞尼，其发布遵循LaTeX Project Public License。

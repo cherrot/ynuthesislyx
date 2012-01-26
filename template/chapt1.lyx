@@ -1,0 +1,1493 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass thuthesis
+\begin_preamble
+\input{preamble}
+\end_preamble
+\options doctor,xetex
+\use_default_options true
+\master main.lyx
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding utf8-plain
+\fontencoding default
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format pdf4
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+引言
+\end_layout
+
+\begin_layout Standard
+版本号：0.1
+\begin_inset space \qquad{}
+\end_inset
+
+发布日期：2012年1月26日
+\begin_inset space \qquad{}
+\end_inset
+
+作者：
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+theauthor
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这是一个用于撰写清华大学学位论文的LyX模板，名为ThuThesisLyX，配合LaTeX模板
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+thuthesis{}
+\end_layout
+
+\end_inset
+
+使用。作者将在撰写博士论文的过程中，不断补充和完善本模板，但作者没有用到的功能将暂不测试。欢迎对本模板或示例文档提出修改意见或指出错误，但不保证能够及时修正。本
+模板的制作遵循以下原则：
+\end_layout
+
+\begin_layout Enumerate
+不对
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+thuthesis{}
+\end_layout
+
+\end_inset
+
+进行修改。
+\end_layout
+
+\begin_layout Enumerate
+让用户能完全在图形界面下工作。
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+heiti{免责声明}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+修改自
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+thuthesis{}
+\end_layout
+
+\end_inset
+
+的免责声明。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+本模板及示例文档不声明任何版权协议，任何个人或团体可自由使用、修改和发布。为用户方便，发布时附带了与本模板配合可正常工作的
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+thuthesis{}
+\end_layout
+
+\end_inset
+
+版本。
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+thuthesis{}
+\end_layout
+
+\end_inset
+
+模板的作者为薛瑞尼，其发布遵循LaTeX Project Public License。
+\end_layout
+
+\begin_layout Enumerate
+本模板和示例文档为作者根据清华大学研究生院颁发的《研究生学位论文写作指南》编写而成，旨在供清华大学毕业生撰写学位论文使用，提供一个纯图形化的环境，尽量隐藏不必要
+的格式标记（与直接编辑tex文件相比），使用户更专注于论文的内容而不是格式。
+\end_layout
+
+\begin_layout Enumerate
+清华大学教务处和研究生院只提供毕业论文写作指南，不提供官方模板，也不会授权第三方模板为官方模板，所以此模板和示例文档仅为写作指南的参考实现，不保证格式审查老师不
+提意见。任何由于使用本模板或示例文档而引起的论文格式审查问题均与本模板作者无关。
+\end_layout
+
+\begin_layout Section
+软件环境
+\end_layout
+
+\begin_layout Standard
+作者的软件环境
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+其中JabRef为文献管理软件，本模板不依赖于JabRef，但是作者推荐使用。
+\end_layout
+
+\end_inset
+
+：
+\end_layout
+
+\begin_layout Enumerate
+Windows 7 + 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+CTeX
+\end_layout
+
+\end_inset
+
+ 2.9.2.162 + 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+LyX
+\end_layout
+
+\end_inset
+
+ 2.0.2 + JabRef 2.7.2 + ThuThesis 4.6
+\end_layout
+
+\begin_layout Enumerate
+Archlinux + 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+TeXLive
+\end_layout
+
+\end_inset
+
+ 2011 + 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+LyX
+\end_layout
+
+\end_inset
+
+ 2.0.2 + JabRef 2.7.2 + ThuThesis 4.6
+\end_layout
+
+\begin_layout Standard
+由于作者所需的专业软件都在Windows平台下，所以将主要在Windows平台下进行测试，但理论上应该平台无关。软件/软件包的安装和配置：
+\end_layout
+
+\begin_layout Description
+字体 我们将使用xelatex进行编译，因此只需在操作系统中安装好相应字体，并在fontname.def文件中指定即可。
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+thuthesis{}
+\end_layout
+
+\end_inset
+
+ 本模板发布时，github上的
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+thuthesis{}
+\end_layout
+
+\end_inset
+
+版本和已发布的4.6版有细微差别，作者使用的是前者。安装方法参见
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+thuthesis{}
+\end_layout
+
+\end_inset
+
+的文档。建议用户先单独测试
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+thuthesis{}
+\end_layout
+
+\end_inset
+
+是否可以编译其示例文档（用xelatex方式，在config.mk文件中设置），以验证LaTeX和
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+thuthesis{}
+\end_layout
+
+\end_inset
+
+是否已经正确安装和配置。
+\end_layout
+
+\begin_layout Description
+JabRef 需要通过Options→Customize entry types为要用到的文献类型添加一个lang字段在Optional fields中，以便对
+中文文献添加``zh''属性。随本模板提供了一个配置文件jabref_prefs.xml，供用户导入JabRef。导入方法：Options→Preferences
+→Import preferences。
+\end_layout
+
+\begin_layout Description
+ThuThesisLyX 可不进行安装，直接在当前目录下使用，但只对当前目录下的lyx文件有效。要让LyX软件能够对任何目录下的lyx文件应用本模板，需要按以下
+方法进行安装：将thuthesis.layout文件放在LyX软件的layouts目录中，重启LyX软件后，将会在Document class中找到book
+ (THU Thesis)类型。
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Windows: 所有用户：...
+\backslash
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+LyX20
+\end_layout
+
+\end_inset
+
+
+\backslash
+Resources
+\backslash
+layouts。
+\begin_inset Newline newline
+\end_inset
+
+仅当前用户：%appdata%
+\backslash
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+LyX2.0
+\end_layout
+
+\end_inset
+
+
+\backslash
+layouts。
+\end_layout
+
+\begin_layout Description
+Linux: 所有用户：/usr/share/lyx/layouts。仅当前用户：~/.lyx/layouts。
+\end_layout
+
+\end_deeper
+\begin_layout Section
+使用方法
+\end_layout
+
+\begin_layout Standard
+可以直接在本模板提供的示例文件（文件列表见
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:list"
+
+\end_inset
+
+）基础上进行修改。如要增加章节，可复制chapt?.lyx文件，并在main.lyx中include即可。如果要自己新建lyx文件，请参照示例文件在Document
+→Settings中进行设置。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption
+
+\begin_layout Plain Layout
+文件列表
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:list"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="20" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<row bottomspace="3pt">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+toprule[1.5pt]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+noalign{
+\backslash
+vskip3pt}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+hei{文件名}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+hei{描述}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row bottomspace="3pt">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+midrule[1pt]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+noalign{
+\backslash
+vskip3pt}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+thuthesis.layout
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+LyX模板
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="3pt" bottomspace="3pt">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+main.lyx
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+主文档
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="3pt" bottomspace="3pt">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+cover.lyx
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+封面和摘要
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="3pt" bottomspace="3pt">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+nomenc.lyx
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+术语表
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="3pt" bottomspace="3pt">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+chapt1.lyx
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+第一章
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="3pt" bottomspace="3pt">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+chapt2.lyx
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+第二章
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="3pt" bottomspace="3pt">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ack.lyx
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+致谢
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="3pt" bottomspace="3pt">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+resume.lyx
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+简历
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="3pt" bottomspace="3pt">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+spine.lyx
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+书脊
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="3pt" bottomspace="3pt">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+preamble.tex
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+共用的导言
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="3pt" bottomspace="3pt">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+refs.bib
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+文献库示例
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="3pt" bottomspace="3pt">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+jabref_prefs.xml
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+JabRef的偏好设定
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="3pt" bottomspace="3pt">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+fontname.def
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+字体定义
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="3pt" bottomspace="3pt">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+thubib.bst
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+参见ThuThesis说明
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="3pt" bottomspace="3pt">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+thuthesis.cfg
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+参见ThuThesis说明
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="3pt" bottomspace="3pt">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+thuthesis.cls
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+参见ThuThesis说明
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="3pt" bottomspace="3pt">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+thuthesis.dtx
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+参见ThuThesis说明
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="3pt" bottomspace="3pt">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+thuthesis.ins
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+参见ThuThesis说明
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="3pt" bottomspace="3pt">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+thutils.sty
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+参见ThuThesis说明
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+tabularnewline[3pt]
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+bottomrule[1.5pt]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+单独图片示例见
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:single"
+
+\end_inset
+
+。包含子图的大图示例见
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:multi"
+
+\end_inset
+
+，其中包含两个小图
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:sub1"
+
+\end_inset
+
+和
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:sub2"
+
+\end_inset
+
+。插入子图的方法：只需在figure float中再插入figure float即可。并排的多个图片示例见
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:parallel1"
+
+\end_inset
+
+和
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:parallel2"
+
+\end_inset
+
+。插入minipage的方法：Insert→Box→Frameless。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/thu-whole-logo.eps
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+图片示例
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:single"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/thu-whole-logo.eps
+	height 2cm
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+子图一
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:sub1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/thu-whole-logo.eps
+	height 2cm
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+子图二
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:sub2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+子图示例
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:multi"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "48text%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/thu-whole-logo.eps
+	height 2cm
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+并排图一
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:parallel1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "48col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/thu-whole-logo.eps
+	height 2cm
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+并排图二
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:parallel2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这里
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Anna2012"
+
+\end_inset
+
+是参考文献
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Anna2012,Baker2012,Carter2012"
+
+\end_inset
+
+示例
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Liu2010,Report2012,Sun2009"
+
+\end_inset
+
+。文献
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+onlinecite{website}
+\end_layout
+
+\end_inset
+
+指出——论文很难写
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zhang2012,Zhao2011"
+
+\end_inset
+
+。这里的破折号不需要使用
+\backslash
+pozhehao命令，直接输入即可，不会出现两条小短线的情况。
+\end_layout
+
+\begin_layout Standard
+公式例子见
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+eqname
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:trig"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\sin\alpha+\sin\beta=2\sin\left(\frac{\alpha+\beta}{2}\right)\cos\left(\frac{\alpha-\beta}{2}\right)\label{eq:trig}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中，
+\begin_inset Formula 
+\[
+\begin{array}{cl}
+\alpha & \text{为一个角}\\
+\beta & \text{为另一个角}
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
