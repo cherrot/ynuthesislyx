@@ -66,13 +66,15 @@
 
 \begin_layout Standard
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
 
 \backslash
-setCJKfamilyfont{fs}[RawFeature={vertical:}]{Adobe Fangsong Std}
+setCJKfamilyfont{fs}[RawFeature={vertical:}]{
+\backslash
+fontfs}
 \end_layout
 
 \end_inset

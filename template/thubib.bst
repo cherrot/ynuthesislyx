@@ -28,6 +28,8 @@ ENTRY
     volume
     year
     url
+    modifydate
+    citedate
   }
   {}
   { label }
@@ -1060,13 +1062,41 @@ FUNCTION {proceedings}
   fin.entry
 }
 
+FUNCTION {format.date.modifydate.citedate}
+{ modifydate empty$
+    'skip$
+    { "(" modifydate * ")" * }
+  if$
+  citedate empty$
+    'skip$
+    { modifydate empty$
+        {"[" citedate * "]" * }
+        {" [" * citedate * "]" * }
+      if$
+    }
+  if$
+}
+
+FUNCTION {electronic}
+{ output.bibitem
+  organization output
+  new.block
+  format.title "[EB/OL]" * output
+  new.block
+  format.date.modifydate.citedate output
+  new.block
+  format.url output
+  new.block
+  fin.entry
+}
+
 FUNCTION {techreport}
 { output.bibitem
   format.authors "author" output.check
   new.block
   format.title "title" output.check
   new.block
-  format.tr.number output.nonnull
+%  format.tr.number output.nonnull
   institution "institution" output.check
   address output
   format.date "year" output.check

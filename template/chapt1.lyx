@@ -29,6 +29,7 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
+\float_placement tbph
 \paperfontsize default
 \spacing single
 \use_hyperref false
@@ -70,11 +71,11 @@
 \end_layout
 
 \begin_layout Standard
-版本号：0.1
+版本号：1.0
 \begin_inset space \qquad{}
 \end_inset
 
-发布日期：2012年1月26日
+发布日期：2012年4月6日
 \begin_inset space \qquad{}
 \end_inset
 
@@ -95,7 +96,18 @@ theauthor
 \end_layout
 
 \begin_layout Standard
-这是一个用于撰写清华大学学位论文的LyX模板，名为ThuThesisLyX，配合LaTeX模板
+这是一个用于撰写清华大学学位论文的LyX模板，名为
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+ThuThesisLyX
+\end_layout
+
+\end_inset
+
+，配合LaTeX模板
 \begin_inset ERT
 status collapsed
 
@@ -108,29 +120,7 @@ thuthesis{}
 
 \end_inset
 
-使用。作者将在撰写博士论文的过程中，不断补充和完善本模板，但作者没有用到的功能将暂不测试。欢迎对本模板或示例文档提出修改意见或指出错误，但不保证能够及时修正。本
-模板的制作遵循以下原则：
-\end_layout
-
-\begin_layout Enumerate
-不对
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-thuthesis{}
-\end_layout
-
-\end_inset
-
-进行修改。
-\end_layout
-
-\begin_layout Enumerate
-让用户能完全在图形界面下工作。
+使用。作者在撰写博士论文的过程中形成此模板，没有用到的功能未作测试。
 \end_layout
 
 \begin_layout Standard
@@ -140,9 +130,9 @@ status open
 
 \begin_layout Plain Layout
 
-
+{
 \backslash
-heiti{免责声明}
+heiti 免责声明}
 \end_layout
 
 \end_inset
@@ -204,8 +194,8 @@ thuthesis{}
 \end_layout
 
 \begin_layout Enumerate
-本模板和示例文档为作者根据清华大学研究生院颁发的《研究生学位论文写作指南》编写而成，旨在供清华大学毕业生撰写学位论文使用，提供一个纯图形化的环境，尽量隐藏不必要
-的格式标记（与直接编辑tex文件相比），使用户更专注于论文的内容而不是格式。
+本模板和示例文档为作者根据清华大学研究生院颁发的《研究生学位论文写作指南》编写而成，旨在供清华大学毕业生撰写学位论文使用，提供一个图形化的环境，尽量隐藏不必要的
+格式标记（与直接编辑tex文件相比），使用户更专注于论文的内容而不是格式。
 \end_layout
 
 \begin_layout Enumerate
@@ -243,7 +233,7 @@ CTeX
 
 \end_inset
 
- 2.9.2.162 + 
+ 2.9.2.162/TexLive 2011 + 
 \begin_inset ERT
 status collapsed
 
@@ -254,22 +244,11 @@ LyX
 
 \end_inset
 
- 2.0.2 + JabRef 2.7.2 + ThuThesis 4.6
+ 2.0.3 + JabRef 2.7.2 + ThuThesis 4.6
 \end_layout
 
 \begin_layout Enumerate
-Archlinux + 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-TeXLive
-\end_layout
-
-\end_inset
-
- 2011 + 
+Archlinux + TexLive 2011 + 
 \begin_inset ERT
 status collapsed
 
@@ -280,11 +259,12 @@ LyX
 
 \end_inset
 
- 2.0.2 + JabRef 2.7.2 + ThuThesis 4.6
+ 2.0.3 + JabRef 2.7.2 + ThuThesis 4.6
 \end_layout
 
 \begin_layout Standard
-由于作者所需的专业软件都在Windows平台下，所以将主要在Windows平台下进行测试，但理论上应该平台无关。软件/软件包的安装和配置：
+由于作者所需的专业软件都在Windows平台下，所以主要在Windows平台下进行测试，但理论上应该平台无关。事实上作者的最终打印稿是在Linux下生成的，顺利
+通过格式审查。软件/软件包的安装和配置：
 \end_layout
 
 \begin_layout Description
@@ -317,7 +297,7 @@ thuthesis{}
 
 \end_inset
 
-版本和已发布的4.6版有细微差别，作者使用的是前者。安装方法参见
+版本和已发布的4.6版有细微差别，作者基于前者进行了微调。
 \begin_inset ERT
 status collapsed
 
@@ -330,7 +310,7 @@ thuthesis{}
 
 \end_inset
 
-的文档。建议用户先单独测试
+的安装方法从略。建议用户先单独测试
 \begin_inset ERT
 status collapsed
 
@@ -361,19 +341,28 @@ thuthesis{}
 
 \begin_layout Description
 JabRef 需要通过Options→Customize entry types为要用到的文献类型添加一个lang字段在Optional fields中，以便对
-中文文献添加``zh''属性。随本模板提供了一个配置文件jabref_prefs.xml，供用户导入JabRef。导入方法：Options→Preferences
-→Import preferences。
+中文文献添加``zh''属性。为electronic类型添加modifydate和citedate字段在Optional fields中，以便添加日期。
 \end_layout
 
 \begin_layout Description
-ThuThesisLyX 可不进行安装，直接在当前目录下使用，但只对当前目录下的lyx文件有效。要让LyX软件能够对任何目录下的lyx文件应用本模板，需要按以下
-方法进行安装：将thuthesis.layout文件放在LyX软件的layouts目录中，重启LyX软件后，将会在Document class中找到book
- (THU Thesis)类型。
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+ThuThesisLyX
+\end_layout
+
+\end_inset
+
+ 可不进行安装，直接在当前目录下使用，但只对当前目录下的lyx文件有效。要让LyX软件能够对任何目录下的lyx文件应用本模板，需要按以下方法进行安装：将thut
+hesis.layout文件放在LyX软件的layouts目录中，重启LyX软件后，将会在Document class中找到book (THU Thesis)类型
+。
 \end_layout
 
 \begin_deeper
 \begin_layout Description
-Windows: 所有用户：...
+Windows: 所有用户——...
 \backslash
 
 \begin_inset ERT
@@ -394,7 +383,7 @@ layouts。
 \begin_inset Newline newline
 \end_inset
 
-仅当前用户：%appdata%
+仅当前用户——%appdata%
 \backslash
 
 \begin_inset ERT
@@ -413,7 +402,11 @@ layouts。
 \end_layout
 
 \begin_layout Description
-Linux: 所有用户：/usr/share/lyx/layouts。仅当前用户：~/.lyx/layouts。
+Linux: 所有用户——/usr/share/lyx/layouts。
+\begin_inset Newline newline
+\end_inset
+
+仅当前用户——~/.lyx/layouts。
 \end_layout
 
 \end_deeper
@@ -422,7 +415,16 @@ Linux: 所有用户：/usr/share/lyx/layouts。仅当前用户：~/.lyx/layouts�
 \end_layout
 
 \begin_layout Standard
-可以直接在本模板提供的示例文件（文件列表见
+可以直接在本模板提供的示例文件基础上进行修改。如要增加章节，可复制chapt?.lyx文件，并在main.lyx中include即可。如果要自己新建lyx文件，请参
+照示例文件在Document→Settings中进行设置。
+\end_layout
+
+\begin_layout Subsection
+表格
+\end_layout
+
+\begin_layout Standard
+随本模板发布的文件列表见
 \begin_inset ERT
 status collapsed
 
@@ -436,18 +438,26 @@ tablename
 \end_inset
 
 
-\begin_inset space ~
-\end_inset
-
-
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:list"
 
 \end_inset
 
-）基础上进行修改。如要增加章节，可复制chapt?.lyx文件，并在main.lyx中include即可。如果要自己新建lyx文件，请参照示例文件在Document
-→Settings中进行设置。
+。三线表的制作方法：
+\end_layout
+
+\begin_layout Enumerate
+全选表格，右键，More→Settings→Borders→Formal，然后在下面选择行间距。按照《指南》要求，前后各3磅。但是似乎“后3磅”稍大了一些，显得
+单元格垂直不居中，略靠上。如果在意，可以选择“后2磅”试试。
+\end_layout
+
+\begin_layout Enumerate
+选中第一行，添加上下横线。选中最后一行，添加下横线。
+\end_layout
+
+\begin_layout Standard
+表头没有加粗，因为TeX没有实际意义上的中文粗体；也没有用黑体，因为黑体显得字号稍大一些。
 \end_layout
 
 \begin_layout Standard
@@ -479,110 +489,35 @@ name "tab:list"
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="20" columns="2">
-<features tabularvalignment="middle">
+<lyxtabular version="3" rows="18" columns="2">
+<features booktabs="true" tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0pt">
 <column alignment="center" valignment="top" width="0pt">
-<row bottomspace="3pt">
-<cell alignment="center" valignment="top" usebox="none">
+<row topspace="3pt" bottomspace="3pt">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-toprule[1.5pt]
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-noalign{
-\backslash
-vskip3pt}
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-hei{文件名}
-\end_layout
-
-\end_inset
-
-
+文件名
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-hei{描述}
-\end_layout
-
-\end_inset
-
-
+描述
 \end_layout
 
 \end_inset
 </cell>
 </row>
-<row bottomspace="3pt">
+<row topspace="3pt" bottomspace="3pt">
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-midrule[1pt]
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-noalign{
-\backslash
-vskip3pt}
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
 thuthesis.layout
 \end_layout
 
@@ -723,6 +658,26 @@ ack.lyx
 \begin_inset Text
 
 \begin_layout Plain Layout
+appdx1.lyx
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+附录
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="3pt" bottomspace="3pt">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 resume.lyx
 \end_layout
 
@@ -793,26 +748,6 @@ refs.bib
 
 \begin_layout Plain Layout
 文献库示例
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row topspace="3pt" bottomspace="3pt">
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-jabref_prefs.xml
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-JabRef的偏好设定
 \end_layout
 
 \end_inset
@@ -899,47 +834,7 @@ thuthesis.cls
 </cell>
 </row>
 <row topspace="3pt" bottomspace="3pt">
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-thuthesis.dtx
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-参见ThuThesis说明
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row topspace="3pt" bottomspace="3pt">
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-thuthesis.ins
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-参见ThuThesis说明
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row topspace="3pt" bottomspace="3pt">
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -948,37 +843,11 @@ thutils.sty
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 参见ThuThesis说明
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-tabularnewline[3pt]
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-bottomrule[1.5pt]
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_inset
@@ -996,6 +865,10 @@ bottomrule[1.5pt]
 
 \end_layout
 
+\begin_layout Subsection
+图片
+\end_layout
+
 \begin_layout Standard
 单独图片示例见
 \begin_inset ERT
@@ -1011,137 +884,13 @@ figurename
 \end_inset
 
 
-\begin_inset space ~
-\end_inset
-
-
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:single"
 
 \end_inset
 
-。包含子图的大图示例见
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-figurename
-\end_layout
-
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:multi"
-
-\end_inset
-
-，其中包含两个小图
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-figurename
-\end_layout
-
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:sub1"
-
-\end_inset
-
-和
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-figurename
-\end_layout
-
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:sub2"
-
-\end_inset
-
-。插入子图的方法：只需在figure float中再插入figure float即可。并排的多个图片示例见
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-figurename
-\end_layout
-
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:parallel1"
-
-\end_inset
-
-和
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-figurename
-\end_layout
-
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:parallel2"
-
-\end_inset
-
-。插入minipage的方法：Insert→Box→Frameless。
+。
 \end_layout
 
 \begin_layout Standard
@@ -1179,6 +928,70 @@ name "fig:single"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+包含子图的大图示例见
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:multi"
+
+\end_inset
+
+，其中包含两个小图：
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:sub1"
+
+\end_inset
+
+和
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:sub2"
+
+\end_inset
+
+。插入子图的方法：在figure float中再插入figure float。
 \end_layout
 
 \begin_layout Standard
@@ -1285,6 +1098,50 @@ name "fig:multi"
 \end_layout
 
 \begin_layout Standard
+并排的多个图片示例见
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:parallel1"
+
+\end_inset
+
+和
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:parallel2"
+
+\end_inset
+
+。插入minipage的方法：Insert→Box→Frameless，或者点Insert box按钮。
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
@@ -1302,7 +1159,7 @@ width "48text%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1349,7 +1206,7 @@ width "48col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1386,6 +1243,239 @@ name "fig:parallel2"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+如果需要图和表并排，可以在figure float中使用
+\backslash
+tabcaption，或者在table float中使用
+\backslash
+figcaption。样例参见
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:partab"
+
+\end_inset
+
+和
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:parfig"
+
+\end_inset
+
+。注意：如果使用figure float，则表不会出现在LyX软件的List of Tables中；如果使用table float，则图不会出现在LyX软件的L
+ist of Figures中。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "49col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tabcaption{并排表}
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:partab"
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<row topspace="3pt" bottomspace="3pt">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+项目
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+值
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="3pt" bottomspace="3pt">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+额定功率
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\unit[10]{kW}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="3pt" bottomspace="3pt">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+开关频率
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\unit[10]{kHz}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "49col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/thu-whole-logo.eps
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+并排图
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:parfig"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+建议在Document→Settings→Float Placement中选择[htbp]，否则，缺少h选项排出来的结果，格式审查老师可能会不满意。
+\end_layout
+
+\begin_layout Subsection
+参考文献
 \end_layout
 
 \begin_layout Standard
@@ -1430,9 +1520,13 @@ key "Zhang2012,Zhao2011"
 
 \end_inset
 
-。这里的破折号不需要使用
+。注意，
 \backslash
-pozhehao命令，直接输入即可，不会出现两条小短线的情况。
+onlinecite不会出现在LyX的List of Citations中。
+\end_layout
+
+\begin_layout Subsection
+公式
 \end_layout
 
 \begin_layout Standard
@@ -1450,10 +1544,6 @@ eqname
 \end_inset
 
 
-\begin_inset space ~
-\end_inset
-
-
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:trig"
@@ -1461,9 +1551,6 @@ reference "eq:trig"
 \end_inset
 
 。
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
 \sin\alpha+\sin\beta=2\sin\left(\frac{\alpha+\beta}{2}\right)\cos\left(\frac{\alpha-\beta}{2}\right)\label{eq:trig}
@@ -1471,22 +1558,284 @@ reference "eq:trig"
 
 \end_inset
 
+其中
+\begin_inset ERT
+status collapsed
 
+\begin_layout Plain Layout
+
+
+\backslash
+bgroup
+\backslash
+setlength{
+\backslash
+jot}{
+\backslash
+jota}
 \end_layout
-
-\begin_layout Standard
-其中，
-\begin_inset Formula 
-\[
-\begin{array}{cl}
-\alpha & \text{为一个角}\\
-\beta & \text{为另一个角}
-\end{array}
-\]
 
 \end_inset
 
 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+临时调整eqnarray的行距
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+ & \alpha & \text{为一个角}\\
+ & \beta & \text{为另一个角}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+egroup{}
+\end_layout
+
+\end_inset
+
+再看一个矩阵的例子
+\begin_inset Formula 
+\begin{equation}
+\mbi{M}=\begin{pmatrix}a & b\\
+b & a
+\end{pmatrix}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+thuthesis{}
+\end_layout
+
+\end_inset
+
+修改说明
+\end_layout
+
+\begin_layout Standard
+为了和MS Word排版效果相似，迎合格式审查老师的习惯，对
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+thuthesis{}
+\end_layout
+
+\end_inset
+
+略有修改。修改方法：调整模板，生成pdf并放大至200%显示，与官方Word示例200%显示效果对比，尽量保持一致。
+\end_layout
+
+\begin_layout Standard
+修改内容：
+\end_layout
+
+\begin_layout Enumerate
+中英文封面。
+\end_layout
+
+\begin_layout Enumerate
+页面边距、页眉页脚边距。
+\end_layout
+
+\begin_layout Enumerate
+章节标题段前段后间距。
+\end_layout
+
+\begin_layout Enumerate
+章标题字体的修改(from haytcb@newsmth)。
+\end_layout
+
+\begin_layout Enumerate
+添加了一个predefense选项，改了封面标题下面括号里的字，用于预答辩时生成初稿。
+\end_layout
+
+\begin_layout Enumerate
+参考文献：添加了对electronic类型的处理，按照学校要求添加了EB/OL字样，需要的字 段：organization, title, modifydate
+, citedate, url。
+\end_layout
+
+\begin_layout Enumerate
+参考文献：去掉了techreport类型中的"Technical Report"字样。
+\end_layout
+
+\begin_layout Enumerate
+书脊和Word保持一致。
+\end_layout
+
+\begin_layout Enumerate
+页眉下方横线和Word保持一致。
+\end_layout
+
+\begin_layout Enumerate
+增加目录行距。
+\end_layout
+
+\begin_layout Enumerate
+调整了个人简历部分，小标题的段前后距离。
+\end_layout
+
+\begin_layout Enumerate
+略微减小了参考文献列表中编号和条目之间的距离。
+\end_layout
+
+\begin_layout Enumerate
+默认pdf打开视图改为双页连续，首页靠右，显示书签栏。
+\end_layout
+
+\begin_layout Standard
+遗留问题：
+\end_layout
+
+\begin_layout Enumerate
+中文封面里的括号无法调成半角宋体。要么是半角Times New Roman，要么是全 角宋体。
+\end_layout
+
+\begin_layout Enumerate
+页面边距、标题间距和Word示例有小的偏差，不过不仔细对比不太容易发现。
+\end_layout
+
+\begin_layout Section
+关于MATLAB和Visio绘图
+\end_layout
+
+\begin_layout Standard
+强烈建议绘图时考虑到图的大小，并按照实际尺寸绘制，而不建议在生成文档的时候进行缩放。目的是精确控制图中的字号和线条粗细等，并有利于保持全文风格统一。
+\end_layout
+
+\begin_layout Subsection
+MATLAB绘图
+\end_layout
+
+\begin_layout Standard
+直接用MATLAB保存为eps或pdf时，中文会出现乱码，斜体的希腊字母会变正，推荐使用metafile to eps converter（LyX自带）或者po
+stscript printer（可以从Adobe网站获得），采用打印文件的方式另存为eps。
+\end_layout
+
+\begin_layout Standard
+注意：在虚拟打印机的偏好设置里，Document Options→PostScripts Options→PostScript Output Option一定要
+选择eps，否则当图形高宽比大于等于1时，得到的图形在插入到文档里或者转成pdf时会被旋转90度。
+\end_layout
+
+\begin_layout Standard
+随本模板提供了一组工具，在utils文件夹下。其中MATLAB部分的基本使用流程是：
+\end_layout
+
+\begin_layout Enumerate
+画图；
+\end_layout
+
+\begin_layout Enumerate
+confAxis(gca)——设置坐标轴的字体和字号；
+\end_layout
+
+\begin_layout Enumerate
+预览：preprint(gcf, 图形占文字宽度的比例, 高宽比)——用于调试；
+\end_layout
+
+\begin_layout Enumerate
+打印：printfigure(...)，在弹出的对话框里输入文件名，例如a.eps；
+\end_layout
+
+\begin_layout Enumerate
+运行batch_eps2pdf，将当前目录下的eps文件批量转为pdf文件。
+\end_layout
+
+\begin_layout Standard
+PLOT_OPTS.mat文件中存储了一些画图的基本参数，建议用类似的方式统一控制图形属性。当有大量图形的时候，批量修改属性比较方便。
+\end_layout
+
+\begin_layout Subsection
+Visio绘图
+\end_layout
+
+\begin_layout Standard
+MS Visio内置的另存为pdf功能有两个问题：1.
+ 线条会错位；2.
+ 无论如何设置页面属性，图形都会有白边。
+\end_layout
+
+\begin_layout Standard
+解决方法：1.
+ 与前面类似，打印成eps；2.
+ 用epstopdf转为pdf，用pdfcrop去除白边。
+\end_layout
+
+\begin_layout Standard
+随本模板提供了在Windows下的批处理工具：
+\end_layout
+
+\begin_layout Enumerate
+batch_eps2pdf用于批量将本文件夹下的eps文件转为pdf文件。
+\end_layout
+
+\begin_layout Enumerate
+batch_eps2pdf_crop用于批量将本文件夹下的eps文件转为pdf文件并去除白边。
+\end_layout
+
+\begin_layout Enumerate
+batch_pdfcrop用于批量去除本文件夹下pdf文件的白边。
+\end_layout
+
+\begin_layout Standard
+另外，如果在Visio里使用了MathType，不建议用拖动边角的办法更改公式大小，而要在MathType里修改字体大小。
+\end_layout
+
+\begin_layout Section
+其他说明
+\end_layout
+
+\begin_layout Standard
+破折号不需要使用
+\backslash
+pozhehao命令，直接输入即可，不会出现两条小短线的情况。
+\end_layout
+
+\begin_layout Standard
+官方Word示例中，“正文样式”的字间距加宽了0.5磅，但是实际正文字间距又没有加宽。历史上有的论文加宽了，有的论文没加宽，老师都没提意见，因为《指南》里没有明确
+规定。个人觉得加宽好看一些，所以在main.lyx中做了相应处理。但是对摘要和参考文献没有加宽。
+\end_layout
+
+\begin_layout Standard
+如果需要对生成的pdf文件进行处理，推荐使用pdftk工具，支持Windows和Linux。例如：需要部分彩印时，可以用pdftk把彩页抽出来，单独形成一个文件
+，并在主文件中原彩页处插入空白页。这样主文件可以顺序打印，然后取出空白页，再彩印。这种方法尤其适合一面彩印而另一面黑白打印的情况。
+\end_layout
+
+\begin_layout Standard
+每章可单独编译，但是部分编译时的格式（页眉、页脚、表格字号等）与最终格式不一样。
+\end_layout
+
+\begin_layout Standard
+LyX模板中对封面设置显示格式略显多余，修改劳神，暂且保留。
 \end_layout
 
 \end_body

@@ -82,7 +82,15 @@ resumeitem{个人简历}
 \end_layout
 
 \begin_layout Resume
-这里写个人简历。
+19XX年X月生于XX。
+\end_layout
+
+\begin_layout Resume
+20XX年X月考入清华大学XX系，就读XX专业。20XX年X月本科毕业，获XX学士学位。
+\end_layout
+
+\begin_layout Resume
+20XX年X月免试进入清华大学XX系XX研究所，攻读博士学位，从事XX相关研究至今。
 \end_layout
 
 \begin_layout Resume
@@ -107,6 +115,27 @@ status collapsed
 
 \backslash
 bgroup
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{7bp}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+baselineskip}{16bp}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 renewcommand
 \backslash
@@ -122,19 +151,59 @@ arabic{enumi}]}
 
 \begin_deeper
 \begin_layout Enumerate
-论文一
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+itemsep}{6bp}
+\end_layout
+
+\end_inset
+
+Fanbo He, Zhengming Zhao, Liqiang Yuan.
+ Impact of inverter configuration on energy cost of grid-connected photovoltaic
+ systems.
+ Renewable Energy, 2012, 41:328-335.
+ (SCI源刊，影响因子2.554；EI收录，检索号：20115214638511)
 \end_layout
 
 \begin_layout Enumerate
-论文二
+文章二
 \end_layout
 
 \begin_layout Enumerate
-论文三
+文章三
 \end_layout
 
 \begin_layout Enumerate
-论文四
+文章四
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+按照《指南》要求，文章列表不同部分之间个空行
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+其它文章一
+\end_layout
+
+\begin_layout Enumerate
+其它文章二
 \end_layout
 
 \begin_layout Standard
@@ -176,6 +245,27 @@ status collapsed
 
 \backslash
 bgroup
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{7bp}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+baselineskip}{16bp}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 renewcommand
 \backslash
@@ -191,7 +281,23 @@ arabic{enumi}]}
 
 \begin_deeper
 \begin_layout Enumerate
-成果一
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+itemsep}{6bp}
+\end_layout
+
+\end_inset
+
+发明专利：孙悟空, 猪八戒, 沙和尚.
+ 一种保护唐僧的方法.
+ 中国: CN ????????? A.
 \end_layout
 
 \begin_layout Enumerate

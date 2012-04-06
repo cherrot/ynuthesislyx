@@ -90,7 +90,7 @@ thetitle
 \end_layout
 
 \begin_layout Major
-电力电子与电力传动
+电气工程
 \end_layout
 
 \begin_layout Author
@@ -110,19 +110,39 @@ theauthor
 \end_layout
 
 \begin_layout Supervisor
-赵争鸣教授
+赵争鸣
+\begin_inset space \hspace{}
+\length 1.3em
+\end_inset
+
+教
+\begin_inset space \quad{}
+\end_inset
+
+授
 \end_layout
 
 \begin_layout Date
-二〇一二年五月
+二〇一二年四月
 \end_layout
 
 \begin_layout Title(en)
-LyX Thesis Template for Tsinghua University
+Tsinghua University Thesis 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+LyX
+\end_layout
+
+\end_inset
+
+ Template
 \end_layout
 
 \begin_layout Degree(en)
-Doctor of Engineering
+Doctor of Philosophy
 \end_layout
 
 \begin_layout Major(en)
@@ -134,71 +154,31 @@ He Fanbo
 \end_layout
 
 \begin_layout Supervisor(en)
-Zhao Zhengming
+Professor Zhao Zhengming
 \end_layout
 
 \begin_layout Date(en)
-May, 2012
+April, 2012
 \end_layout
 
 \begin_layout Abstract
-这里是中文摘要。
+中文摘要。800-1000字，一页以内。
+\end_layout
+
+\begin_layout Abstract
+关键词没有像Word范例中一样“沉底”，感觉难看。如有需要，可添加vertical fill。
 \end_layout
 
 \begin_layout Keywords
-清华大学,
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-LaTeX
-\end_layout
-
-\end_inset
-
-,
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-LyX
-\end_layout
-
-\end_inset
-
-,论文,模板
+关键词,关键词,关键词,关键词,关键词
 \end_layout
 
 \begin_layout Abstract(en)
-This is the English abstract.
+英文摘要，与中文对应，没有明确字数和页数限制，通常一页多。
 \end_layout
 
 \begin_layout Keywords(en)
-THU,
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-LaTeX
-\end_layout
-
-\end_inset
-
-,
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-LyX
-\end_layout
-
-\end_inset
-
-,thesis,template
+keyword,keyword,keyword,keyword,keyword
 \end_layout
 
 \end_body

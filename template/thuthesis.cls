@@ -37,11 +37,13 @@
 \newif\ifthu@bachelor\thu@bachelorfalse
 \newif\ifthu@master\thu@masterfalse
 \newif\ifthu@doctor\thu@doctorfalse
+\newif\ifthu@predefense\thu@predefensefalse
 \newif\ifthu@postdoctor\thu@postdoctorfalse
 \newif\ifthu@secret\thu@secretfalse
 \DeclareOption{bachelor}{\thu@bachelortrue}
 \DeclareOption{master}{\thu@mastertrue}
 \DeclareOption{doctor}{\thu@doctortrue}
+\DeclareOption{predefense}{\thu@predefensetrue}
 \DeclareOption{postdoctor}{\thu@postdoctortrue}
 \DeclareOption{secret}{\thu@secrettrue}
 \newif\ifthu@dvips
@@ -95,6 +97,7 @@
 \RequirePackage[config]{subfig}
 \RequirePackage{indentfirst}
 \RequirePackage[neverdecrease]{paralist}
+\RequirePackage[bottom]{footmisc} % keep footnotes at the bottom when using \raggedbottom
 \ifthu@xetex
   \RequirePackage{mathptmx} % fontspec conflicts with txfonts now, so we have to load other times-math fonts.
   \RequirePackage{xltxtra}
@@ -159,6 +162,7 @@
   colorlinks=false,
   plainpages=false,
   pdfpagelabels,
+  pdfpagelayout=TwoColumnRight,
   pdfborder=0 0 0}
 \ifthu@dvips
   \RequirePackage{breakurl}
@@ -238,14 +242,14 @@
   \addtolength{\textheight}{-7.8cm}
 \else
   \addtolength{\textwidth}{-6cm}
-  \setlength{\topmargin}{2.2cm-1in}
+  \setlength{\topmargin}{2.27cm-1in}
   \setlength{\oddsidemargin}{3cm-1in}
-  \setlength{\footskip}{1.5cm}
-  \setlength{\headsep}{0.5cm}
-  \addtolength{\textheight}{-6cm}
+  \setlength{\footskip}{1.1cm}
+  \setlength{\headsep}{0.45cm}
+  \addtolength{\textheight}{-6.6cm}
 \fi
 \setlength{\evensidemargin}{\oddsidemargin}
-\setlength{\headheight}{20pt}
+\setlength{\headheight}{0.5cm}
 \setlength{\topskip}{0pt}
 \setlength{\skip\footins}{15pt}
 \let\thu@cleardoublepage\cleardoublepage
@@ -265,12 +269,12 @@
 \def\ps@thu@headings{%
   \def\@oddhead{\vbox to\headheight{%
     \hb@xt@\textwidth{\hfill\wuhao\song\leftmark\ifthu@bachelor\relax\else\hfill\fi}%
-      \vskip2pt\hbox{\vrule width\textwidth height0.4pt depth0pt}}}
+      \vskip2pt\hskip-0.005\textwidth\hbox{\vrule width1.01\textwidth height0.7pt depth0pt}}}
   \def\@evenhead{\vbox to\headheight{%
       \hb@xt@\textwidth{\wuhao\song%
       \ifthu@bachelor\thu@schoolname\thu@bachelor@subtitle%
        \else\hfill\leftmark\fi\hfill}%
-      \vskip2pt\hbox{\vrule width\textwidth height0.4pt depth0pt}}}
+      \vskip2pt\hskip-0.005\textwidth\hbox{\vrule width1.01\textwidth height0.7pt depth0pt}}}
   \def\@oddfoot{\hfil\wuhao\thepage\hfil}
   \let\@evenfoot=\@oddfoot}
 \renewcommand{\chaptermark}[1]{\@mkboth{\@chapapp\  ~~#1}{}}
@@ -412,19 +416,19 @@
   \chaptermark{#1}%
   \@makechapterhead{#2}}
 \def\@makechapterhead#1{%
-  \vspace*{20bp}%
+  \vspace*{24bp}%
   {\parindent \z@ \centering
     \hei\csname thu@title@font\endcsname\ifthu@bachelor\xiaosan\else\sanhao[1]\fi
     \ifnum \c@secnumdepth >\m@ne
       \@chapapp\hskip1em
     \fi
     #1\par\nobreak
-    \vskip 24bp}}
+    \vskip 18bp}}
 \def\@schapter#1{%
   \@makeschapterhead{#1}
   \@afterheading}
 \def\@makeschapterhead#1{%
-  \vspace*{20bp}%
+  \vspace*{24bp}%
   {\parindent \z@ \centering
    \hei\csname thu@title@font\endcsname\sanhao[1]
    \ifthu@bachelor\xiaosan\else
@@ -434,7 +438,7 @@
    \fi
    \interlinepenalty\@M
    #1\par\nobreak
-   \vskip 24bp}}
+   \vskip 18bp}}
 \newcounter{thu@bookmark}
 \def\thu@chapter*{%
   \@ifnextchar [ % ]
@@ -467,11 +471,11 @@
                      {6bp \@plus .2ex}%
                      {\hei\csname thu@title@font\endcsname\sihao[1.429]}}
 \renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
-                        {\ifthu@bachelor -12bp\else -16bp\fi\@plus -1ex \@minus -.2ex}%
+                        {\ifthu@bachelor -12bp\else -12bp\fi\@plus -1ex \@minus -.2ex}%
                         {6bp \@plus .2ex}%
                         {\hei\csname thu@title@font\endcsname\ifthu@bachelor\xiaosi[1.667]\else\banxiaosi[1.538]\fi}}
 \renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
-                           {\ifthu@bachelor -12bp\else -16bp\fi\@plus -1ex \@minus -.2ex}%
+                           {\ifthu@bachelor -12bp\else -12bp\fi\@plus -1ex \@minus -.2ex}%
                            {6bp \@plus .2ex}%
                            {\hei\csname thu@title@font\endcsname\xiaosi[1.667]}}
 \setcounter{secnumdepth}{3}
@@ -482,7 +486,7 @@
 \fi
 \renewcommand\tableofcontents{%
   \thu@chapter*[]{\contentsname}
-  \ifthu@bachelor\xiaosi[1.8]\else\xiaosi[1.5]\fi\@starttoc{toc}\normalsize}
+  \ifthu@bachelor\xiaosi[1.8]\else\xiaosi[1.65]\fi\@starttoc{toc}\normalsize}
 \ifthu@arialtoc
   \def\thu@toc@font{\sffamily}
 \fi
@@ -514,7 +518,8 @@
       \leavevmode
       \advance\leftskip\@tempdima
       \hskip -\leftskip
-      {\hei\ifthu@bachelor\sffamily\else\csname thu@toc@font\endcsname\fi #1} % numberline is called here, and it uses \@tempdima
+      {\sffamily\ifthu@bachelor\sffamily\else\csname thu@toc@font\endcsname\fi #1} % numberline is called here, and it uses \@tempdima %% The first \sffamily was \hei, modified by haytcb
+%      {\hei\ifthu@bachelor\sffamily\else\csname thu@toc@font\endcsname\fi #1} % numberline is called here, and it uses \@tempdima
       \leaders\hbox{$\m@th\mkern \@dotsep mu\hbox{.}\mkern \@dotsep mu$}\hfill
       \nobreak{\normalfont\normalcolor #2}\par
       \penalty\@highpenalty
@@ -650,14 +655,14 @@
     \else
       \parbox[t][9cm][t]{\paperwidth-8cm}{
       \renewcommand{\baselinestretch}{1.5}
-      \begin{center}
+      \begin{center}\vskip 0.9cm
       \yihao[1.2]{\hei\sffamily\thu@ctitle}\par
       \ifthu@master
         \erhao[1.1] \textbf{\sffamily\thu@etitle}\par\vskip 5bp
       \else % for doctor
         \par\vskip 20bp
       \fi
-      \xiaoer[1] \textrm{{\ziju{2bp}\thu@apply}}
+      \xiaoer[1] \textrm{{\ziju{1.3bp}\thu@apply}}
       \end{center}}
     \fi
     \ifthu@bachelor
@@ -681,59 +686,61 @@
             \end{tabular}
         }}
     \else
-      \parbox[t][7.8cm][t]{\textwidth}{{\sanhao[1.5]
-        \begin{center}\fs
-          \setlength{\thu@title@width}{6em}
-          \setlength{\extrarowheight}{4pt}
+      \parbox[t][8.2cm][t]{\textwidth}{{\sanhao[1.5]
+        \begin{center}\vskip 1.1cm \fs
+          \setlength{\thu@title@width}{2.8cm}
+          \setlength{\extrarowheight}{7pt}
           \ifxetex % todo: ugly codes
-            \begin{tabular}{p{\thu@title@width}@{}c@{\extracolsep{8pt}}l}
+            \begin{tabular}{p{\thu@title@width}@{\extracolsep{0.2em}}c@{\extracolsep{0.9em}}l}
           \else
             \begin{tabular}{p{\thu@title@width}c@{\extracolsep{4pt}}l}
           \fi
-              \thu@put@title{\thu@department@title}  & \thu@title@sep & {\ziju{3bp}\thu@cdepartment}\\
-              \thu@put@title{\thu@major@title}       & \thu@title@sep & {\ziju{3bp}\thu@cmajor}\\
-              \thu@put@title{\thu@author@title}      & \thu@title@sep & {\ziju{11bp}\thu@cauthor}\\
-              \thu@put@title{\thu@supervisor@title}  & \thu@title@sep & {\ziju{11bp}\thu@csupervisor}\\
+              \thu@put@title{\thu@department@title}  & \thu@title@sep & {\thu@cdepartment}\\
+              \thu@put@title{\thu@major@title}       & \thu@title@sep & {\thu@cmajor}\\
+              \thu@put@title{\thu@author@title}      & \thu@title@sep & {\ziju{8bp}\thu@cauthor}\\
+              \thu@put@title{\thu@supervisor@title}  & \thu@title@sep & {\ziju{8bp}\thu@csupervisor}\\
               \ifx\thu@cassosupervisor\@empty\else
-                \thu@put@title{\thu@assosuper@title} & \thu@title@sep & {\ziju{11bp}\thu@cassosupervisor}\\
+                \thu@put@title{\thu@assosuper@title} & \thu@title@sep & {\ziju{8bp}\thu@cassosupervisor}\\
               \fi
               \ifx\thu@ccosupervisor\@empty\else
-                \thu@put@title{\thu@cosuper@title}   & \thu@title@sep & {\ziju{11bp}\thu@ccosupervisor}\\
+                \thu@put@title{\thu@cosuper@title}   & \thu@title@sep & {\ziju{8bp}\thu@ccosupervisor}\\
               \fi
             \end{tabular}
         \end{center}}}
       \fi
-     \begin{center}
+     \begin{center}\vskip 10bp
        {\ifthu@bachelor\hskip-0.9cm\xiaosi\else\sanhao\fi \song \thu@cdate}
      \end{center}
     \end{center}} % end of titlepage
 \newcommand{\thu@doctor@engcover}{%
   \begin{center}
-    \vspace*{0.2cm}
-    \parbox[t][5.2cm][t]{\paperwidth-7.2cm}{
-      \renewcommand{\baselinestretch}{1.5}
+    \vspace*{1.35cm}
+    \parbox[t][5.1cm][t]{\paperwidth-7.2cm}{
+      \renewcommand{\baselinestretch}{1.3}
       \begin{center}
         \erhao[1.1]\bfseries\sffamily\thu@etitle
       \end{center}}
-    \parbox[t][5.8cm][t]{\paperwidth-7.2cm}{
-      \renewcommand{\baselinestretch}{1.3}
+    \parbox[t][5.0cm][t]{\paperwidth-7.2cm}{
+      \renewcommand{\baselinestretch}{1.32}
       \begin{center}
         \sanhao Dissertation Submitted to\\
         {\bfseries Tsinghua University}\\
         in partial fulfillment of the requirement\\
         for the degree of\\
-        {\bfseries\sffamily\thu@edegree}
+        {\bfseries\sffamily\thu@edegree}\\[2.8bp]
+        in\\[3.3bp]
+        {\bfseries\sffamily\thu@emajor}
       \end{center}}
-    \parbox[t][3.6cm][b]{\paperwidth-7.2cm}{
-      \renewcommand{\baselinestretch}{1.3}
+    \parbox[t][5.24cm][b]{\paperwidth-7.2cm}{
+      \renewcommand{\baselinestretch}{1.32}
       \begin{center}
-        \sanhao\sffamily by\\[3bp]
-        \bfseries\thu@eauthor\\(~\thu@emajor~)
+        \sanhao\sffamily by\\[6bp]
+        \bfseries\thu@eauthor
       \end{center}}
-    \par\vspace{0.9cm}
-    \parbox[t][2.1cm][t]{\paperwidth-7.2cm}{
+    \par\vspace{0.1cm}
+    \parbox[t][1.74cm][t]{\paperwidth-7.2cm}{
       \renewcommand{\baselinestretch}{1.2}\xiaosan\centering
-      \begin{tabular}{rl}
+      \begin{tabular}{r@{\extracolsep{0.8em}}l}
         Dissertation Supervisor : & \thu@esupervisor\\
         \ifx\thu@eassosupervisor\@empty
           \else Associate Supervisor : & \thu@eassosupervisor\\\fi
@@ -860,7 +867,7 @@
    \list{\@biblabel{\@arabic\c@enumiv}}%
         {\renewcommand{\makelabel}[1]{##1\hfill}
          \settowidth\labelwidth{1.1cm}
-         \setlength{\labelsep}{0.4em}
+         \setlength{\labelsep}{0.2em}
          \setlength{\itemindent}{0pt}
          \setlength{\leftmargin}{\labelwidth+\labelsep}
          \addtolength{\itemsep}{-0.7em}
@@ -884,10 +891,15 @@
   }{}
 \newenvironment{resume}[1][\thu@resume@title]{%
   \thu@chapter*{#1}}{}
-\newcommand{\resumeitem}[1]{\vspace{2.5em}{\sihao\hei\centerline{#1}}\par}
+\newcommand{\resumeitem}[1]{\vspace{29.5bp}{\sihao\hei\centerline{#1}}\par\vspace{6bp}}
 \newcommand{\shuji}[1][\thu@ctitle]{
-  \newpage\thispagestyle{empty}\ziju{0.4em}\fs\xiaosan
-  \hfill\rotatebox{-90}{\hb@xt@ \textheight{#1\hfill\thu@cauthor}}}
+%  \newpage\thispagestyle{empty}\ziju{0.4em}\fs\xiaosan
+%  \hfill\rotatebox{-90}{\hb@xt@ \textheight{#1\hfill\thu@cauthor}}}
+  \newpage\thispagestyle{empty}
+    \setlength{\topmargin}{4.65cm-1in}
+    \hfill\rotatebox{-90}{
+    \hb@xt@ 15.75cm{\ziju{0.5bp}\sanhao\fs{#1}}
+    \hb@xt@ 5cm{\ziju{0.8em}\sanhao\fs{\thu@cauthor}}}}
 \iffalse
 \newcommand{\bs}{\symbol{'134}}%Print backslash
 \newcommand{\cih}[1]{%

@@ -29,6 +29,7 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
+\float_placement tbph
 \paperfontsize default
 \spacing single
 \use_hyperref false
@@ -75,6 +76,53 @@
 \begin_body
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+CHECK LIST
+\end_layout
+
+\begin_layout Itemize
+ThuThesis模板的版本是否正确
+\end_layout
+
+\begin_layout Itemize
+要打印的论文版本是否正确
+\end_layout
+
+\begin_layout Itemize
+中英文日期应为论文成文打印的日期
+\end_layout
+
+\begin_layout Itemize
+签字
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+论文授权页导师和作者签字
+\end_layout
+
+\begin_layout Itemize
+论文声明页作者签字
+\end_layout
+
+\begin_layout Itemize
+送审表一份，系里盖章
+\end_layout
+
+\begin_layout Itemize
+评阅名单一式两份，导师和作者签字
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status collapsed
 
@@ -109,6 +157,40 @@ status collapsed
 
 \backslash
 makecover
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+CJKglue}{
+\backslash
+hskip 0.9bp plus 0.03
+\backslash
+baselineskip minus 0.03
+\backslash
+baselineskip}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+调整字间距
 \end_layout
 
 \end_inset
@@ -195,6 +277,40 @@ backmatter
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+CJKglue}{
+\backslash
+hskip 0bp plus 0.03
+\backslash
+baselineskip minus 0.03
+\backslash
+baselineskip}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+调整字间距
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 bibfiles "refs"
@@ -206,9 +322,53 @@ options "thubib"
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+CJKglue}{
+\backslash
+hskip 0.9bp plus 0.03
+\backslash
+baselineskip minus 0.03
+\backslash
+baselineskip}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+调整字间距
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
 filename "ack.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Appendix
+\begin_inset CommandInset include
+LatexCommand input
+filename "appdx1.lyx"
 
 \end_inset
 

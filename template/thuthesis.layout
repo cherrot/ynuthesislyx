@@ -147,6 +147,13 @@ Style Acknowledge
     LatexName       ack
 End
 
+Style Appendix
+    CopyStyle       Standard
+    LatexType       Environment
+    Category        BackMatter
+    LatexName       appendix
+End
+
 Style Resume
     CopyStyle       Standard
     LatexType       Environment
