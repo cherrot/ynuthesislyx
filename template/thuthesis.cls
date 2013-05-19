@@ -434,7 +434,9 @@
 \def\@makechapterhead#1{%
   \vspace*{24bp}%
   {\parindent \z@ \centering
-    \hei\csname thu@title@font\endcsname\ifthu@bachelor\xiaosan\else\sanhao[1]\fi
+    %Cherrot modified 章节标题使用粗宋体3号字 XXX: thu@title@font 什么意思？
+    %\hei\csname thu@title@font\endcsname\ifthu@bachelor\xiaosan\else\sanhao[1]\fi
+    \boldsong\csname \endcsname\ifthu@bachelor\sanhao\else\sanhao[1]\fi
     \ifnum \c@secnumdepth >\m@ne
       \@chapapp\hskip1em
     \fi
@@ -482,18 +484,22 @@
   \else
     \@mkboth{#3}{#3}
   \fi}
+%Cherrot modified 按照云南大学论文撰写规范做相应修改
 \renewcommand\section{\@startsection {section}{1}{\z@}%
                      {\ifthu@bachelor -20bp\else -24bp\fi\@plus -1ex \@minus -.2ex}%
                      {6bp \@plus .2ex}%
-                     {\hei\csname thu@title@font\endcsname\sihao[1.429]}}
+                     %{\hei\csname thu@title@font\endcsname\sihao[1.429]}}
+                     {\boldsong\csname \endcsname\xiaosan[1.429]}}
 \renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
                         {\ifthu@bachelor -12bp\else -12bp\fi\@plus -1ex \@minus -.2ex}%
                         {6bp \@plus .2ex}%
-                        {\hei\csname thu@title@font\endcsname\ifthu@bachelor\xiaosi[1.667]\else\banxiaosi[1.538]\fi}}
+                        %{\hei\csname thu@title@font\endcsname\ifthu@bachelor\xiaosi[1.667]\else\banxiaosi[1.538]\fi}}
+                        {\boldsong\csname \endcsname\ifthu@bachelor\sihao[1.667]\else\banxiaosi[1.538]\fi}}
 \renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
                            {\ifthu@bachelor -12bp\else -12bp\fi\@plus -1ex \@minus -.2ex}%
                            {6bp \@plus .2ex}%
-                           {\hei\csname thu@title@font\endcsname\xiaosi[1.667]}}
+                           %{\hei\csname thu@title@font\endcsname\xiaosi[1.667]}}
+                           {\boldsong\csname \endcsname\sihao[1.667]}}
 \setcounter{secnumdepth}{3}
 \ifthu@doctor
   \setcounter{tocdepth}{2}
