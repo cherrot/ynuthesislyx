@@ -8,6 +8,7 @@ YnuThesisLyX是云南大学学位论文模板，基于 [thuthesislyx](https://co
 作者时间和能力有限，因此只把*本科论文模板*制作完成，硕士和博士部分没有做调整。希望有更多人参与改进该项目，如果在使用上遇到问题，欢迎在本项目github主页提交缺陷，期待您的反馈！
 
 文件列表：
+
     thuthesis.layout    LyX模板
     main.lyx            示例：主文档
     cover.lyx           示例：封面
