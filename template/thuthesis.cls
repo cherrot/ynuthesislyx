@@ -189,7 +189,9 @@
   \if@openright\cleardoublepage\else\clearpage\fi
   \@mainmattertrue
   \pagenumbering{arabic}
-  \ifthu@bachelor\pagestyle{thu@plain}\else\pagestyle{thu@headings}\fi}
+  %\ifthu@bachelor\pagestyle{thu@plain}\else\pagestyle{thu@headings}\fi}
+  %cherrot modified 设置本科论文页眉
+  \ifthu@bachelor\pagestyle{thu@headings}\else\pagestyle{thu@headings}\fi}
 \renewcommand\backmatter{%
   \if@openright\cleardoublepage\else\clearpage\fi
   \@mainmattertrue}
@@ -413,7 +415,9 @@
 \fi
 \renewcommand\chapter{%
   \if@openright\cleardoublepage\else\clearpage\fi\phantomsection%
-  \ifthu@bachelor\thispagestyle{thu@plain}%
+  %Cherrot modified 设置页眉
+  %\ifthu@bachelor\thispagestyle{thu@plain}%
+  \ifthu@bachelor\thispagestyle{thu@headings}%
   \else\thispagestyle{thu@headings}\fi%
   \global\@topnum\z@%
   \@afterindenttrue%
@@ -508,7 +512,9 @@
 \fi
 \renewcommand\tableofcontents{%
   \thu@chapter*[]{\contentsname}
-  \ifthu@bachelor\xiaosi[1.8]\else\xiaosi[1.65]\fi\@starttoc{toc}\normalsize}
+  %Cherrot modified 设置目录样式
+  %\ifthu@bachelor\xiaosi[1.8]\else\xiaosi[1.65]\fi\@starttoc{toc}\normalsize}
+  \ifthu@bachelor\xiaosi[1.25]\else\xiaosi[1.65]\fi\@starttoc{toc}\normalsize}
 \ifthu@arialtoc
   \def\thu@toc@font{\sffamily}
 \fi
@@ -807,9 +813,20 @@
       \thu@authorization@mk\fi
   \end{titlepage}
   \normalsize
+
+  %cherrot added to make TOCs
+  \renewcommand{\CJKglue}{\hskip 0.9bp plus 0.03\baselineskip minus 0.03\baselineskip}
+  \tableofcontents
+  \listoffigures
+  \listoftables
+
   \thu@makeabstract
   \let\@tabular\thu@tabular}
 \newcommand{\thu@makeabstract}{%
+
+  %cherrot added 设置摘要为宋体小五号字
+  \song\csname \endcsname\xiaowu
+
   \ifthu@bachelor\clearpage\else\cleardoublepage\fi
   \thu@chapter*[]{\cabstractname} % no tocline
   \ifthu@bachelor
@@ -828,7 +845,11 @@
   \vskip12bp
   \setbox0=\hbox{\textbf{Key words:\enskip}}
   \ifthu@bachelor\indent\else\noindent\hangindent\wd0\hangafter1\fi
-    \box0\thu@ekeywords}
+    \box0\thu@ekeywords
+
+  %cherrot added to reuse normal font size
+  \normalsize
+}
 \newenvironment{denotation}[1][2.5cm]{
   \thu@chapter*[]{\thu@denotation@name} % no tocline
   \noindent\begin{list}{}%
@@ -885,7 +906,11 @@
 \def\thuphdbib{\ifthu@doctor [D]\else [Doctor Thesis]\fi}
 \renewenvironment{thebibliography}[1]{%
    \thu@chapter*{\bibname}%
-   \wuhao[1.5]
+
+   %Cherrot modified 参考文献使用小五号字 1.25倍行距
+   %\wuhao[1.5]
+   \xiaowu[1.25]
+
    \list{\@biblabel{\@arabic\c@enumiv}}%
         {\renewcommand{\makelabel}[1]{##1\hfill}
          \settowidth\labelwidth{1.1cm}
