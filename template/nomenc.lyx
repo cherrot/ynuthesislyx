@@ -66,15 +66,11 @@
 \begin_body
 
 \begin_layout Denotation
-EE 电气工程(Electrical Engineering)
+Cherrot 本文作者。
 \end_layout
 
 \begin_layout Denotation
-NSFC 中国国家自然科学基金(National Natural Science Foundation of China)
-\end_layout
-
-\begin_layout Denotation
-GUI 图形用户界面(Graphical User Interface)
+Redis 一个开源的使用ANSI C语言编写、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库，并提供多种语言的API。
 \end_layout
 
 \end_body

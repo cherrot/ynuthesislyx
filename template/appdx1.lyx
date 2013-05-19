@@ -5,6 +5,7 @@
 \textclass thuthesis
 \begin_preamble
 \input{preamble}
+\usepackage{caption}
 \end_preamble
 \options doctor,xetex
 \use_default_options true
@@ -78,7 +79,7 @@ name "chap:matrix"
 \end_layout
 
 \begin_layout Standard
-内容
+附录内容
 \end_layout
 
 \end_body

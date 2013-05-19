@@ -67,7 +67,7 @@
 
 \begin_layout Title
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -82,20 +82,20 @@ thetitle
 \end_layout
 
 \begin_layout Degree
-工学博士
+工学学士
 \end_layout
 
 \begin_layout Department
-电机工程与应用电子技术系
+网络工程系
 \end_layout
 
 \begin_layout Major
-电气工程
+网络工程
 \end_layout
 
 \begin_layout Author
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -110,20 +110,21 @@ theauthor
 \end_layout
 
 \begin_layout Supervisor
-赵争鸣
+XX
 \begin_inset space \hspace{}
 \length 1.3em
 \end_inset
 
 教
-\begin_inset space \quad{}
+\begin_inset space \hspace{}
+\length 1.3em
 \end_inset
 
 授
 \end_layout
 
 \begin_layout Date
-二〇一二年四月
+二〇一三年五月
 \end_layout
 
 \begin_layout Title(en)
@@ -137,47 +138,27 @@ LyX
 
 \end_inset
 
- Template for Tsinghua University Thesis
+ Template for Thesis of Yunnan University
 \end_layout
 
 \begin_layout Degree(en)
-Doctor of Philosophy
+Bachelor of Engineering
 \end_layout
 
 \begin_layout Major(en)
-Electrical Engineering
+Networking Engineering
 \end_layout
 
 \begin_layout Author(en)
-He Fanbo
+Cherrot Luo
 \end_layout
 
 \begin_layout Supervisor(en)
-Professor Zhao Zhengming
+Professor XX
 \end_layout
 
 \begin_layout Date(en)
-April, 2012
-\end_layout
-
-\begin_layout Abstract
-中文摘要。800-1000字，一页以内。
-\end_layout
-
-\begin_layout Abstract
-关键词没有像Word范例中一样“沉底”，感觉难看。如有需要，可添加vertical fill。
-\end_layout
-
-\begin_layout Keywords
-关键词,关键词,关键词,关键词,关键词
-\end_layout
-
-\begin_layout Abstract(en)
-英文摘要，与中文对应，没有明确字数和页数限制，通常一页多。
-\end_layout
-
-\begin_layout Keywords(en)
-keyword,keyword,keyword,keyword,keyword
+May, 2013
 \end_layout
 
 \end_body

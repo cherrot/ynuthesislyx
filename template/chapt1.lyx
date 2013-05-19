@@ -75,7 +75,7 @@
 \begin_inset space \qquad{}
 \end_inset
 
-发布日期：2012年4月6日
+发布日期：2013年5月20日
 \begin_inset space \qquad{}
 \end_inset
 
@@ -213,7 +213,7 @@ thuthesis{}
 status open
 
 \begin_layout Plain Layout
-其中JabRef为文献管理软件，本模板不依赖于JabRef，但是作者推荐使用。
+其中JabRef和Zotero为文献管理软件，本模板不依赖于该软件，但是作者推荐使用。
 \end_layout
 
 \end_inset
@@ -262,9 +262,27 @@ LyX
  2.0.3 + JabRef 2.7.2 + ThuThesis 4.6
 \end_layout
 
+\begin_layout Enumerate
+Ubuntu Linux + TexLive 2011 + 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+LyX
+\end_layout
+
+\end_inset
+
+ 2.0.3 + Zotero + ThuThesis 4.6
+\end_layout
+
 \begin_layout Standard
-由于作者所需的专业软件都在Windows平台下，所以主要在Windows平台下进行测试，但理论上应该平台无关。事实上作者的最终打印稿是在Linux下生成的，顺利
-通过格式审查。软件/软件包的安装和配置：
+原作者在Windows上测试和使用该模板，作者主要工作平台为Linux，该模板是平台无关的，但要保证模板需要的字体已安装在系统中。
+\end_layout
+
+\begin_layout Standard
+软件/软件包的安装和配置：
 \end_layout
 
 \begin_layout Description
@@ -345,8 +363,12 @@ JabRef 需要通过Options→Customize entry types为要用到的文献类型添
 \end_layout
 
 \begin_layout Description
+Zotero 一款跨平台的文献管理软件，使用方法请自行google。
+\end_layout
+
+\begin_layout Description
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -415,8 +437,8 @@ Linux: 所有用户——/usr/share/lyx/layouts。
 \end_layout
 
 \begin_layout Standard
-可以直接在本模板提供的示例文件基础上进行修改。如要增加章节，可复制chapt?.lyx文件，并在main.lyx中include即可。如果要自己新建lyx文件，请参
-照示例文件在Document→Settings中进行设置。
+可以直接在本模板提供的示例文件基础上进行修改。如要增加章节，可复制chapt?.lyx文件，并在main.lyx中include进来即可。可以根据个人需要自行增删章
+节（如本科论文不需要个人简历，可以直接删掉）。如果要自己新建lyx文件，请参照示例文件在Document→Settings中进行设置。
 \end_layout
 
 \begin_layout Subsection
@@ -902,7 +924,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename figures/thu-whole-logo.eps
+	filename ../../../Document/文档规范&模板/thuthesislyx/template/figures/thu-whole-logo.eps
 
 \end_inset
 
@@ -1009,7 +1031,7 @@ status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename figures/thu-whole-logo.eps
+	filename ../../../Document/文档规范&模板/thuthesislyx/template/figures/thu-whole-logo.eps
 	height 2cm
 
 \end_inset
@@ -1047,7 +1069,7 @@ status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename figures/thu-whole-logo.eps
+	filename ../../../Document/文档规范&模板/thuthesislyx/template/figures/thu-whole-logo.eps
 	height 2cm
 
 \end_inset
@@ -1164,7 +1186,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename figures/thu-whole-logo.eps
+	filename ../../../Document/文档规范&模板/thuthesislyx/template/figures/thu-whole-logo.eps
 	height 2cm
 
 \end_inset
@@ -1211,7 +1233,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename figures/thu-whole-logo.eps
+	filename ../../../Document/文档规范&模板/thuthesislyx/template/figures/thu-whole-logo.eps
 	height 2cm
 
 \end_inset
@@ -1437,7 +1459,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename figures/thu-whole-logo.eps
+	filename ../../../Document/文档规范&模板/thuthesislyx/template/figures/thu-whole-logo.eps
 
 \end_inset
 
@@ -1513,7 +1535,7 @@ onlinecite{website}
 
 \end_inset
 
-指出——论文很难写
+指出——看到身边都在用word苦逼改格式，我感到很开心 ;)
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Zhang2012,Zhao2011"
@@ -1560,7 +1582,7 @@ reference "eq:trig"
 
 其中
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -1616,6 +1638,96 @@ egroup{}
 b & a
 \end{pmatrix}
 \end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+代码
+\end_layout
+
+\begin_layout Standard
+代码格式我没有做调整，因此代码遵从正文格式（宋体小四+1.25倍行距），如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+algorithmname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:代码示例"
+
+\end_inset
+
+。如果代码量较大显示效果很不好，希望有人能帮忙完善一下代码的样式。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+def hello():
+\end_layout
+
+\begin_layout Plain Layout
+
+    print('Pure code, pure soul.')
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+hello()
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:代码示例"
+
+\end_inset
+
+代码示例
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
 
 \end_inset
 

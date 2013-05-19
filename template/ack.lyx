@@ -66,20 +66,36 @@
 \begin_body
 
 \begin_layout Acknowledge
-感谢已毕业的清华大学计算机系学长薛瑞尼制作的LaTeX模板
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-thuthesis{}
+在本科学位论文即将完成之际，谨在此向曾经给我帮助和支持的人们表示衷心的感谢。
 \end_layout
 
-\end_inset
+\begin_layout Acknowledge
+首先要感谢的是笔者的导师XX教授。本文能够顺利完成，离不开导师的悉心指导和严格要求，在此谨向导师表示崇高的敬意和衷心的感谢！
+\end_layout
 
-。
+\begin_layout Acknowledge
+感谢笔者在云南大学学习期间给予过笔者无私帮助的所有老师和同学们，使笔者得以拥有一个很好的学习和工作环境。笔者在学习过程中得到很多老师和同学的无私帮助，是老师们的
+悉心指导给予了笔者正确的方向。
+\end_layout
+
+\begin_layout Acknowledge
+感谢为自由软件和开放源代码运动不断做出贡献的开发者和使用者们，本项目所使用的PHP开发语言和解释器、Nginx服务器、Chrome和其他主流开源浏览器、Vim编
+辑器、SVN和Git版本控制系统、Redis数据存储、以及Linux系统，无一不是开放源代码的系统。自由软件和开放源代码运动为信息技术和互联网技术的发展做出了不
+可磨灭的贡献！
+\end_layout
+
+\begin_layout Acknowledge
+感谢笔者在公司实习时的同事们，他们在项目开发过程中给予笔者莫大的帮助和鼓励，是他们的信任给了我锻炼的机会。也使笔者在实习过程中积攒了大量的项目实际开发中的宝贵经
+验！
+\end_layout
+
+\begin_layout Acknowledge
+感谢清华大学计算机系学长薛瑞尼制作的LaTeX模板ThuThesis，以及贺凡波学长基于ThuThesis制作的LyX模板ThuThesisLyX，他们的共享精
+神为笔者的论文编写带来了极大的便利！
+\end_layout
+
+\begin_layout Acknowledge
+尤其感谢多年来一直给予我鼎力支持和无私奉献的父母，没有他们付出与牺牲，笔者的课题就无法顺利完成，再次衷心地感谢与祝福他们！
 \end_layout
 
 \end_body

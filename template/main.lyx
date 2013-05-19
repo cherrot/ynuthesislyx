@@ -4,10 +4,11 @@
 \begin_header
 \textclass thuthesis
 \begin_preamble
+%见premble.tex
 \input{preamble}
 \hypersetup{pdftitle={\thetitle},pdfauthor={\theauthor}}
 \end_preamble
-\options doctor,xetex
+\options bachelor,xetex
 \use_default_options true
 \maintain_unincluded_children false
 \language english
@@ -31,7 +32,7 @@
 \index_command default
 \float_placement tbph
 \paperfontsize default
-\spacing single
+\spacing other 1.2
 \use_hyperref false
 \pdf_bookmarks true
 \pdf_bookmarksnumbered true
@@ -43,7 +44,7 @@
 \pdf_backref false
 \pdf_pdfusetitle true
 \papersize default
-\use_geometry false
+\use_geometry true
 \use_amsmath 1
 \use_esint 1
 \use_mhchem 1
@@ -58,6 +59,10 @@
 \shortcut idx
 \color #008000
 \end_index
+\leftmargin 3cm
+\topmargin 2.5cm
+\rightmargin 2cm
+\bottommargin 2.5cm
 \secnumdepth 2
 \tocdepth 2
 \paragraph_separation indent
@@ -77,7 +82,7 @@
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 CHECK LIST
@@ -124,7 +129,7 @@ ThuThesis模板的版本是否正确
 
 \begin_layout Standard
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -149,8 +154,18 @@ filename "cover.lyx"
 \end_layout
 
 \begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "abstract.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -165,12 +180,27 @@ makecover
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+生成目录的命令移到 
+\backslash
+makecover 函数体中，使目录可以在摘要前面.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
-
+%
 \backslash
 renewcommand{
 \backslash
@@ -200,11 +230,11 @@ status open
 
 \begin_layout Standard
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
-
+%
 \backslash
 tableofcontents
 \end_layout
@@ -225,8 +255,15 @@ filename "nomenc.lyx"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -262,7 +299,7 @@ filename "chapt2.lyx"
 
 \begin_layout Standard
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -278,7 +315,7 @@ backmatter
 
 \begin_layout Standard
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -323,7 +360,7 @@ options "thubib"
 
 \begin_layout Standard
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
