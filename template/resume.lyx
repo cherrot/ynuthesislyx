@@ -1,0 +1,325 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass thuthesis
+\begin_preamble
+\input{preamble}
+\end_preamble
+\options doctor,xetex
+\use_default_options true
+\master main.lyx
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding utf8-plain
+\fontencoding default
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format pdf4
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Resume
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+resumeitem{个人简历}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Resume
+19XX年X月生于XX。
+\end_layout
+
+\begin_layout Resume
+20XX年X月考入清华大学XX系，就读XX专业。20XX年X月本科毕业，获XX学士学位。
+\end_layout
+
+\begin_layout Resume
+20XX年X月免试进入清华大学XX系XX研究所，攻读博士学位，从事XX相关研究至今。
+\end_layout
+
+\begin_layout Resume
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+resumeitem{发表的学术论文}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+bgroup
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{7bp}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+baselineskip}{16bp}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand
+\backslash
+labelenumi{[
+\backslash
+arabic{enumi}]}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+itemsep}{6bp}
+\end_layout
+
+\end_inset
+
+Fanbo He, Zhengming Zhao, Liqiang Yuan.
+ Impact of inverter configuration on energy cost of grid-connected photovoltaic
+ systems.
+ Renewable Energy, 2012, 41:328-335.
+ (SCI源刊，影响因子2.554；EI收录，检索号：20115214638511)
+\end_layout
+
+\begin_layout Enumerate
+文章二
+\end_layout
+
+\begin_layout Enumerate
+文章三
+\end_layout
+
+\begin_layout Enumerate
+文章四
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+按照《指南》要求，文章列表不同部分之间个空行
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+其它文章一
+\end_layout
+
+\begin_layout Enumerate
+其它文章二
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+egroup
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Resume
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+resumeitem{研究成果}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+bgroup
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{7bp}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+baselineskip}{16bp}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand
+\backslash
+labelenumi{[
+\backslash
+arabic{enumi}]}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+itemsep}{6bp}
+\end_layout
+
+\end_inset
+
+发明专利：孙悟空, 猪八戒, 沙和尚.
+ 一种保护唐僧的方法.
+ 中国: CN ????????? A.
+\end_layout
+
+\begin_layout Enumerate
+成果二
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+egroup
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

@@ -1,0 +1,27 @@
+\usepackage{thutils}
+\usepackage{nccbbb}
+\newcommand{\thetitle}{清华大学学位论文模板}
+\newcommand{\theauthor}{贺凡波}
+\newcommand{\eqname}{式}
+% disable rubber spaces between paragraphs
+\raggedbottom
+% for parallel figure and table
+\newcommand\figcaption{\def\@captype{figure}\caption}
+\newcommand\tabcaption{\def\@captype{table}\caption}
+% set width of rules in tables (better be added to ThuThesis)
+\setlength{\heavyrulewidth}{1.5pt}
+\setlength{\lightrulewidth}{1pt}
+% adjust linespace in eqnarray
+\setlength{\jot}{8bp}
+\newcommand{\jota}{-0.3bp}
+% allow page breaks within eqnarray
+\allowdisplaybreaks
+% bold italic in math
+\def\mbi#1{\textbf{\emph{#1}}}
+% set figure placement fractions
+\renewcommand{\textfraction}{0.15}
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\bottomfraction}{0.65}
+\renewcommand{\floatpagefraction}{0.8}
+% define where to break URLs
+\def\UrlBreaks{\do\A\do\B\do\C\do\D\do\E\do\F\do\G\do\H\do\I\do\J\do\K\do\L\do\M\do\N\do\O\do\P\do\Q\do\R\do\S\do\T\do\U\do\V\do\W\do\X\do\Y\do\Z\do\[\do\\\do\]\do\^\do\_\do\`\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\.\do\@\do\\\do\/\do\!\do\_\do\|\do\;\do\>\do\]\do\)\do\,\do\?\do\'\do+\do\=\do\#}
