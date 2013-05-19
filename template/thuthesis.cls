@@ -101,13 +101,24 @@
 \ifthu@xetex
   \RequirePackage{mathptmx} % fontspec conflicts with txfonts now, so we have to load other times-math fonts.
   \RequirePackage{xltxtra}
+
+  %Cherrot removed 'ItalicFont' which would cause error
+  %\RequirePackage[CJKnumber,BoldFont,ItalicFont,normalindentfirst]{xeCJK}
   \RequirePackage[CJKnumber,BoldFont,normalindentfirst]{xeCJK}
+
   \punctstyle{quanjiao}
   % todo: minor fix of CJKnumb
   \def\CJK@null{\kern\CJKnullspace\Unicode{48}{7}\kern\CJKnullspace}
   \defaultfontfeatures{Mapping=tex-text} % use TeX --
   \input{fontname.def}
-  \setCJKmainfont[BoldFont={\fonthei}]{\fontsong}
+
+  %Cherrot removed ItalicFont, set bold Song font
+  %\setCJKmainfont[BoldFont={\fonthei}]{\fontsong}
+  \setCJKmainfont[BoldFont={\fontbsong}]{\fontsong}
+
+  %cherrot add bold Song font definition
+  \setCJKfamilyfont{boldsong}{\fontbsong}
+
   \setCJKsansfont{\fonthei}
   \setCJKmonofont{\fontkai}
   \setCJKfamilyfont{song}{\fontsong}
@@ -184,6 +195,11 @@
   \@mainmattertrue}
 \newcommand{\song}{\CJKfamily{song}}    % 宋体
 \def\songti{\song}
+
+%Cherrot Add bold Song font
+\newcommand{\boldsong}{\CJKfamily{boldsong}}    % 粗宋体
+\def\cusongti{\boldsong}
+
 \newcommand{\fs}{\CJKfamily{fs}}        % 仿宋体
 \def\fangsong{\fs}
 \newcommand{\kai}{\CJKfamily{kai}}      % 楷体
