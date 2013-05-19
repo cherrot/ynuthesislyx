@@ -1,7 +1,10 @@
 \ProvidesFile{fontname.def}
 \newcommand{\fontsong}{SimSun}
+\newcommand{\fontbsong}{方正粗宋简体}
 \newcommand{\fonthei}{SimHei}
 \newcommand{\fontkai}{KaiTi}
 \newcommand{\fontfs}{FangSong}
-\newcommand{\fontli}{LiSu}
-\newcommand{\fontyou}{YouYuan}
+%\newcommand{\fontli}{LiSu}
+\newcommand{\fontli}{FangSong}
+%\newcommand{\fontyou}{YouYuan}
+\newcommand{\fontyou}{KaiTi}
