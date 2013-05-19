@@ -101,13 +101,13 @@
 \ifthu@xetex
   \RequirePackage{mathptmx} % fontspec conflicts with txfonts now, so we have to load other times-math fonts.
   \RequirePackage{xltxtra}
-  \RequirePackage[CJKnumber,BoldFont,ItalicFont,normalindentfirst]{xeCJK}
+  \RequirePackage[CJKnumber,BoldFont,normalindentfirst]{xeCJK}
   \punctstyle{quanjiao}
   % todo: minor fix of CJKnumb
   \def\CJK@null{\kern\CJKnullspace\Unicode{48}{7}\kern\CJKnullspace}
   \defaultfontfeatures{Mapping=tex-text} % use TeX --
   \input{fontname.def}
-  \setCJKmainfont[BoldFont={\fonthei}, ItalicFont={\fontkai}]{\fontsong}
+  \setCJKmainfont[BoldFont={\fonthei}]{\fontsong}
   \setCJKsansfont{\fonthei}
   \setCJKmonofont{\fontkai}
   \setCJKfamilyfont{song}{\fontsong}
